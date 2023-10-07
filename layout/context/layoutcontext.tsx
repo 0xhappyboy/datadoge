@@ -1,0 +1,94 @@
+'use client'
+import React, { useState, createContext } from 'react';
+import { LayoutState, ChildContainerProps, LayoutConfig, LayoutContextProps } from '../../types/types';
+import '@rainbow-me/rainbowkit/styles.css';
+import {
+    getDefaultWallets,
+    RainbowKitProvider,
+} from '@rainbow-me/rainbowkit';
+import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+
+export const LayoutContext = createContext({} as LayoutContextProps);
+
+export const LayoutProvider = ({ children }: ChildContainerProps) => {
+    const [layoutConfig, setLayoutConfig] = useState<LayoutConfig>({
+        ripple: false,
+        inputStyle: 'outlined',
+        menuMode: 'static',
+        colorScheme: 'light',
+        theme: 'lara-light-indigo',
+        scale: 14
+    });
+
+    const [layoutState, setLayoutState] = useState<LayoutState>({
+        staticMenuDesktopInactive: false,
+        overlayMenuActive: false,
+        profileSidebarVisible: false,
+        configSidebarVisible: false,
+        staticMenuMobileActive: false,
+        menuHoverActive: false
+    });
+
+    const onMenuToggle = () => {
+        if (isOverlay()) {
+            setLayoutState((prevLayoutState) => ({ ...prevLayoutState, overlayMenuActive: !prevLayoutState.overlayMenuActive }));
+        }
+
+        if (isDesktop()) {
+            setLayoutState((prevLayoutState) => ({ ...prevLayoutState, staticMenuDesktopInactive: !prevLayoutState.staticMenuDesktopInactive }));
+        } else {
+            setLayoutState((prevLayoutState) => ({ ...prevLayoutState, staticMenuMobileActive: !prevLayoutState.staticMenuMobileActive }));
+        }
+    };
+
+    const showProfileSidebar = () => {
+        setLayoutState((prevLayoutState) => ({ ...prevLayoutState, profileSidebarVisible: !prevLayoutState.profileSidebarVisible }));
+    };
+
+    const isOverlay = () => {
+        return layoutConfig.menuMode === 'overlay';
+    };
+
+    const isDesktop = () => {
+        return window.innerWidth > 991;
+    };
+
+    const value: LayoutContextProps = {
+        layoutConfig,
+        setLayoutConfig,
+        layoutState,
+        setLayoutState,
+        onMenuToggle,
+        showProfileSidebar
+    };
+
+    const { chains, publicClient } = configureChains(
+        [mainnet, polygon, optimism, arbitrum],
+        [
+            publicProvider()
+        ]
+    );
+    const { connectors } = getDefaultWallets({
+        appName: 't1',
+        projectId: 'xxxx',
+        chains
+    });
+    const wagmiConfig = createConfig({
+        autoConnect: true,
+        connectors,
+        publicClient
+    })
+
+    return (
+        <>
+            <WagmiConfig config={wagmiConfig}>
+                <RainbowKitProvider chains={chains}>
+                    <LayoutContext.Provider value={value}>{children}</LayoutContext.Provider>;
+                </RainbowKitProvider>
+            </WagmiConfig>
+        </>
+    )
+};
