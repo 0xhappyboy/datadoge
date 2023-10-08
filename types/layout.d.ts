@@ -85,6 +85,7 @@ export interface MenuModel {
 }
 
 export interface AppMenuItem extends MenuModel {
+    logo?: string;
     items?: AppMenuItem[];
     badge?: 'UPDATED' | 'NEW';
     badgeClass?: string;

@@ -47,7 +47,7 @@ const MenuDemo = ({ children }: any) => {
     const nestedMenuitems = [
         {
             label: 'Customers',
-            icon: 'pi pi-fw pi-table',
+            
             items: [
                 {
                     label: 'New',
@@ -137,7 +137,7 @@ const MenuDemo = ({ children }: any) => {
     const tieredMenuItems = [
         {
             label: 'Customers',
-            icon: 'pi pi-fw pi-table',
+            
             items: [
                 {
                     label: 'New',
@@ -348,7 +348,7 @@ const MenuDemo = ({ children }: any) => {
         },
         {
             label: 'Furniture',
-            icon: 'pi pi-fw pi-image',
+            
             items: [
                 [
                     {
@@ -399,7 +399,7 @@ const MenuDemo = ({ children }: any) => {
     const panelMenuitems = [
         {
             label: 'Customers',
-            icon: 'pi pi-fw pi-table',
+            
             items: [
                 {
                     label: 'New',

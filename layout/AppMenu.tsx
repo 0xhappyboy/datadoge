@@ -16,85 +16,121 @@ const AppMenu = () => {
             items: [{ label: 'User', icon: 'pi pi-fw pi-user', to: '/uikit/user' }]
         },
         {
-            label: 'Home',
-            items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
-        },
-        {
-            label: 'UI Components',
-            items: [
-                { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
-                { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
-                { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
-                { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', to: '/uikit/invalidstate' },
-                { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
-                { label: 'Table', icon: 'pi pi-fw pi-table', to: '/uikit/table' },
-                { label: 'List', icon: 'pi pi-fw pi-list', to: '/uikit/list' },
-                { label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/uikit/tree' },
-                { label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/uikit/panel' },
-                { label: 'Overlay', icon: 'pi pi-fw pi-clone', to: '/uikit/overlay' },
-                { label: 'Media', icon: 'pi pi-fw pi-image', to: '/uikit/media' },
-                { label: 'Menu', icon: 'pi pi-fw pi-bars', to: '/uikit/menu', preventExact: true },
-                { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/message' },
-                { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
-                { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
-            ]
-        },
-        {
-            label: 'Pages',
-            icon: 'pi pi-fw pi-briefcase',
-            to: '/pages',
-            items: [
-                {
-                    label: 'Empty',
-                    icon: 'pi pi-fw pi-circle-off',
-                    to: '/pages/empty'
-                }
-            ]
-        },
-        {
-            label: 'Hierarchy',
+            label: 'Network',
             items: [
                 {
                     label: 'Submenu 1',
-                    icon: 'pi pi-fw pi-bookmark',
                     items: [
                         {
                             label: 'Submenu 1.1',
-                            icon: 'pi pi-fw pi-bookmark',
                             items: [
-                                { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' }
+                                { label: 'Submenu 1.1.1', },
+                                { label: 'Submenu 1.1.2', },
+                                { label: 'Submenu 1.1.3', }
                             ]
                         },
                         {
                             label: 'Submenu 1.2',
-                            icon: 'pi pi-fw pi-bookmark',
-                            items: [{ label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }]
+                            items: [{ label: 'Submenu 1.2.1', }]
                         }
                     ]
                 },
                 {
                     label: 'Submenu 2',
-                    icon: 'pi pi-fw pi-bookmark',
                     items: [
                         {
                             label: 'Submenu 2.1',
-                            icon: 'pi pi-fw pi-bookmark',
+
                             items: [
-                                { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' }
+                                { label: 'Submenu 2.1.1', },
+                                { label: 'Submenu 2.1.2', }
                             ]
                         },
                         {
                             label: 'Submenu 2.2',
-                            icon: 'pi pi-fw pi-bookmark',
-                            items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }]
+                            items: [{ label: 'Submenu 2.2.1', }]
                         }
                     ]
                 }
             ]
-        }
+        },
+        {
+            label: 'Market',
+            items: [
+                {
+                    label: 'Tokens',
+                    items: [
+                        { label: 'Ethereum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png' },
+                        { label: 'BSC', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png' },
+                        { label: 'Arbitrum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11841.png' },
+                        { label: 'Polygon', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png' },
+                        { label: 'Avalanche', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png' },
+                        { label: 'zkSync', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/24091.png' },
+                        { label: 'Base', logo: 'https://dd.dexscreener.com/ds-data/chains/base.png' },
+                        { label: 'Optimism', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11840.png' },
+                        { label: 'Solana', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png' },
+                        { label: 'Linea', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/27657.png' },
+                        { label: 'Osmosis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/12220.png' },
+                        { label: 'Fantom', logo: 'https://dd.dexscreener.com/ds-data/chains/fantom.png' },
+                        { label: 'Aptos', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/21794.png' },
+                        { label: 'Metis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png' },
+                        { label: 'Sui', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png' },
+                    ]
+                },
+                {
+                    label: 'Defi',
+                    items: [
+                        { label: 'Ethereum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png' },
+                        { label: 'BSC', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png' },
+                        { label: 'Arbitrum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11841.png' },
+                        { label: 'Polygon', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png' },
+                        { label: 'Avalanche', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png' },
+                        { label: 'zkSync', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/24091.png' },
+                        { label: 'Base', logo: 'https://dd.dexscreener.com/ds-data/chains/base.png' },
+                        { label: 'Optimism', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11840.png' },
+                        { label: 'Solana', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png' },
+                        { label: 'Linea', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/27657.png' },
+                        { label: 'Osmosis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/12220.png' },
+                        { label: 'Fantom', logo: 'https://dd.dexscreener.com/ds-data/chains/fantom.png' },
+                        { label: 'Aptos', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/21794.png' },
+                        { label: 'Metis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png' },
+                        { label: 'Sui', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png' },
+                        {
+                            label: 'Submenu 2.1',
+
+                            items: [
+                                { label: 'Submenu 2.1.1', },
+                                { label: 'Submenu 2.1.2', }
+                            ]
+                        },
+                        {
+                            label: 'Submenu 2.2',
+
+                            items: [{ label: 'Submenu 2.2.1', }]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'UI Components',
+            items: [
+                { label: 'Form Layout', to: '/uikit/formlayout' },
+                { label: 'Input', to: '/uikit/input' },
+                { label: 'Float Label', to: '/uikit/floatlabel' },
+                { label: 'Invalid State', to: '/uikit/invalidstate' },
+                { label: 'Button', to: '/uikit/button', class: 'rotated-icon' },
+                { label: 'Table', to: '/uikit/table' },
+                { label: 'List', to: '/uikit/list' },
+                { label: 'Tree', to: '/uikit/tree' },
+                { label: 'Panel', to: '/uikit/panel' },
+                { label: 'Overlay', to: '/uikit/overlay' },
+                { label: 'Media', to: '/uikit/media' },
+                { label: 'Menu', to: '/uikit/menu', },
+                { label: 'Message', to: '/uikit/message' },
+                { label: 'File', to: '/uikit/file' },
+            ]
+        },
     ];
 
     return (

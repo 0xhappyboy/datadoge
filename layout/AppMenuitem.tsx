@@ -27,7 +27,7 @@ const AppMenuitem = (props: AppMenuItemProps) => {
 
     useEffect(() => {
         onRouteChange(pathname);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pathname, searchParams]);
 
     const itemClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -62,6 +62,7 @@ const AppMenuitem = (props: AppMenuItemProps) => {
             {props.root && item!.visible !== false && <div className="layout-menuitem-root-text">{item!.label}</div>}
             {(!item!.to || item!.items) && item!.visible !== false ? (
                 <a href={item!.url} onClick={(e) => itemClick(e)} className={classNames(item!.class, 'p-ripple')} target={item!.target} tabIndex={0}>
+                    {item!.logo != undefined && <img width={20} height={20} src={item!.logo} />}
                     <i className={classNames('layout-menuitem-icon', item!.icon)}></i>
                     <span className="layout-menuitem-text">{item!.label}</span>
                     {item!.items && <i className="pi pi-fw pi-angle-down layout-submenu-toggler"></i>}
@@ -71,6 +72,7 @@ const AppMenuitem = (props: AppMenuItemProps) => {
 
             {item!.to && !item!.items && item!.visible !== false ? (
                 <Link href={item!.to} replace={item!.replaceUrl} target={item!.target} onClick={(e) => itemClick(e)} className={classNames(item!.class, 'p-ripple', { 'active-route': isActiveRoute })} tabIndex={0}>
+                    {item!.logo != undefined && <img width={20} height={20} src={item!.logo} />}
                     <i className={classNames('layout-menuitem-icon', item!.icon)}></i>
                     <span className="layout-menuitem-text">{item!.label}</span>
                     {item!.items && <i className="pi pi-fw pi-angle-down layout-submenu-toggler"></i>}
