@@ -19,46 +19,7 @@ const AppMenu = () => {
             label: 'Network',
             items: [
                 {
-                    label: 'Submenu 1',
-                    items: [
-                        {
-                            label: 'Submenu 1.1',
-                            items: [
-                                { label: 'Submenu 1.1.1', },
-                                { label: 'Submenu 1.1.2', },
-                                { label: 'Submenu 1.1.3', }
-                            ]
-                        },
-                        {
-                            label: 'Submenu 1.2',
-                            items: [{ label: 'Submenu 1.2.1', }]
-                        }
-                    ]
-                },
-                {
-                    label: 'Submenu 2',
-                    items: [
-                        {
-                            label: 'Submenu 2.1',
-
-                            items: [
-                                { label: 'Submenu 2.1.1', },
-                                { label: 'Submenu 2.1.2', }
-                            ]
-                        },
-                        {
-                            label: 'Submenu 2.2',
-                            items: [{ label: 'Submenu 2.2.1', }]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            label: 'Market',
-            items: [
-                {
-                    label: 'Tokens',
+                    label: 'Analyze',
                     items: [
                         { label: 'Ethereum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png' },
                         { label: 'BSC', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png' },
@@ -75,6 +36,34 @@ const AppMenu = () => {
                         { label: 'Aptos', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/21794.png' },
                         { label: 'Metis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png' },
                         { label: 'Sui', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png' },
+                    ]
+                },
+                {
+                    label: 'Chance',
+                },
+            ]
+        },
+        {
+            label: 'Market',
+            items: [
+                {
+                    label: 'Tokens',
+                    items: [
+                        { label: 'Ethereum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', to: '/uikit/tokens' },
+                        { label: 'BSC', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', to: '/uikit/tokens' },
+                        { label: 'Arbitrum', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11841.png', to: '/uikit/tokens' },
+                        { label: 'Polygon', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png', to: '/uikit/tokens' },
+                        { label: 'Avalanche', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', to: '/uikit/tokens' },
+                        { label: 'zkSync', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/24091.png', to: '/uikit/tokens' },
+                        { label: 'Base', logo: 'https://dd.dexscreener.com/ds-data/chains/base.png', to: '/uikit/tokens' },
+                        { label: 'Optimism', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11840.png', to: '/uikit/tokens' },
+                        { label: 'Solana', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', to: '/uikit/tokens' },
+                        { label: 'Linea', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/27657.png', to: '/uikit/tokens' },
+                        { label: 'Osmosis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/12220.png', to: '/uikit/tokens' },
+                        { label: 'Fantom', logo: 'https://dd.dexscreener.com/ds-data/chains/fantom.png', to: '/uikit/tokens' },
+                        { label: 'Aptos', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/21794.png', to: '/uikit/tokens' },
+                        { label: 'Metis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png', to: '/uikit/tokens' },
+                        { label: 'Sui', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', to: '/uikit/tokens' },
                     ]
                 },
                 {
@@ -95,21 +84,14 @@ const AppMenu = () => {
                         { label: 'Aptos', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/21794.png' },
                         { label: 'Metis', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/9640.png' },
                         { label: 'Sui', logo: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png' },
-                        {
-                            label: 'Submenu 2.1',
-
-                            items: [
-                                { label: 'Submenu 2.1.1', },
-                                { label: 'Submenu 2.1.2', }
-                            ]
-                        },
-                        {
-                            label: 'Submenu 2.2',
-
-                            items: [{ label: 'Submenu 2.2.1', }]
-                        }
                     ]
                 }
+            ]
+        },
+        {
+            label: 'Shopping Mall',
+            items: [
+                { label: 'Form Layout', to: '/uikit/formlayout' },
             ]
         },
         {
