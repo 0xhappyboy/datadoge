@@ -1,0 +1,18 @@
+{
+    "1": {
+        "name": "eth",
+        "explorer": "https://etherscan.io/"
+    },
+    "42161": {
+        "name": "arb",
+        "explorer": "https://arbiscan.io/"
+    },
+    "10": {
+        "name": "op",
+        "explorer": "https://optimistic.etherscan.io/"
+    },
+    "8453": {
+        "name": "base",
+        "explorer": "https://basescan.org/"
+    }
+}
